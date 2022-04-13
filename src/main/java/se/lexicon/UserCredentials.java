@@ -10,6 +10,7 @@ public class UserCredentials {
   private String role;
 
   public UserCredentials(String id, String username, String password, String role) {
+    if (id == null) throw new RuntimeException("Id was null");
     this.id = id;
     setUsername(username);
     setPassword(password);
@@ -29,7 +30,7 @@ public class UserCredentials {
   }
 
   public void setUsername(String username) {
-    if(username == null) throw new IllegalArgumentException("Username should not be null");
+    if(username == null) throw new RuntimeException("Username should not be null");
     this.username = username;
   }
 
@@ -38,7 +39,7 @@ public class UserCredentials {
   }
 
   public void setPassword(String password) {
-    if(password == null) throw new IllegalArgumentException("Password should not be null");
+    if(password == null) throw new RuntimeException("Password should not be null");
     this.password = password;
   }
 
@@ -47,7 +48,7 @@ public class UserCredentials {
   }
 
   public void setRole(String role) {
-    if(role == null) throw new IllegalArgumentException("Role should not be null");
+    if(role == null) throw new RuntimeException("Role should not be null");
     this.role = role;
   }
 }

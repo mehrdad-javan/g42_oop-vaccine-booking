@@ -102,6 +102,17 @@ public class Booking {
     this.premises = premises;
   }
 
+  public String bookingInformation() {
+    return "Booking{" +
+            "id='" + id + '\'' +
+            ", dateTime=" + dateTime +
+            ", price=" + price +
+            ", administrator='" + administrator + '\'' +
+            ", vaccineId='" + vaccineId + '\'' +
+            ", vacant=" + vacant +
+            '}';
+  }
+
   @Override
   public String toString() {
     return "Booking{" +

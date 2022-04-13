@@ -20,6 +20,9 @@ public class Patient {
                  LocalDate birthDate,
                  UserCredentials credentials,
                  ContactInfo contactInfo) {
+    if(id == null){
+      throw new RuntimeException("id was null");
+    }
     this.id = id;
     setSsn(ssn);
     setFirstName(firstName);
